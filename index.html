@@ -11792,7 +11792,7 @@ div#notebook {
 <p><strong>Materials</strong></p>
 <p>We will work from this Jupyter Notebook, available on our course JupyterHub instance here: <a href="https://tutorials-1.rcnyu.org">https://tutorials-1.rcnyu.org</a>.</p>
 <p>You are welcome to download and deploy this same Notebook in your own local Jupyter environment. To copy the entire set of teaching materials, clone its repository:</p>
-<p><code>git clone https://github.com/NYU-DataServices/python-cleaning.git</code></p>
+<p><code>git clone https://github.com/NYU-DataServices/startingpandas.git</code></p>
 <p>You can also find this notebook (in non-executable form) at <a href="https://nyu-dataservices.github.io/startingpandas">https://nyu-dataservices.github.io/startingpandas</a>.</p>
 
 </div>
@@ -11810,7 +11810,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -11833,25 +11833,6 @@ div#notebook {
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>7960
-6480080
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
@@ -11866,7 +11847,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Update the fourth column of our list of lists</span>
@@ -11887,30 +11868,10 @@ div#notebook {
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[0, 1, 2, 3, 4]
-[0, 1, 2, 9, 4]
-18.4 ms ± 0 ns per loop (mean ± std. dev. of 1 run, 1 loop each)
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">timeit</span> -n 1 -r 1 df_list_lists[3] = df_list_lists[3].apply(lambda x: x*3)
@@ -11919,201 +11880,6 @@ div#notebook {
 </pre></div>
 
 </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>10.6 ms ± 0 ns per loop (mean ± std. dev. of 1 run, 1 loop each)
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[5]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>0</th>
-      <th>1</th>
-      <th>2</th>
-      <th>3</th>
-      <th>4</th>
-      <th>5</th>
-      <th>6</th>
-      <th>7</th>
-      <th>8</th>
-      <th>9</th>
-      <th>...</th>
-      <th>890</th>
-      <th>891</th>
-      <th>892</th>
-      <th>893</th>
-      <th>894</th>
-      <th>895</th>
-      <th>896</th>
-      <th>897</th>
-      <th>898</th>
-      <th>899</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>0</td>
-      <td>1</td>
-      <td>2</td>
-      <td>9</td>
-      <td>4</td>
-      <td>5</td>
-      <td>6</td>
-      <td>7</td>
-      <td>8</td>
-      <td>9</td>
-      <td>...</td>
-      <td>890</td>
-      <td>891</td>
-      <td>892</td>
-      <td>893</td>
-      <td>894</td>
-      <td>895</td>
-      <td>896</td>
-      <td>897</td>
-      <td>898</td>
-      <td>899</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>0</td>
-      <td>1</td>
-      <td>2</td>
-      <td>9</td>
-      <td>4</td>
-      <td>5</td>
-      <td>6</td>
-      <td>7</td>
-      <td>8</td>
-      <td>9</td>
-      <td>...</td>
-      <td>890</td>
-      <td>891</td>
-      <td>892</td>
-      <td>893</td>
-      <td>894</td>
-      <td>895</td>
-      <td>896</td>
-      <td>897</td>
-      <td>898</td>
-      <td>899</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>0</td>
-      <td>1</td>
-      <td>2</td>
-      <td>9</td>
-      <td>4</td>
-      <td>5</td>
-      <td>6</td>
-      <td>7</td>
-      <td>8</td>
-      <td>9</td>
-      <td>...</td>
-      <td>890</td>
-      <td>891</td>
-      <td>892</td>
-      <td>893</td>
-      <td>894</td>
-      <td>895</td>
-      <td>896</td>
-      <td>897</td>
-      <td>898</td>
-      <td>899</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>0</td>
-      <td>1</td>
-      <td>2</td>
-      <td>9</td>
-      <td>4</td>
-      <td>5</td>
-      <td>6</td>
-      <td>7</td>
-      <td>8</td>
-      <td>9</td>
-      <td>...</td>
-      <td>890</td>
-      <td>891</td>
-      <td>892</td>
-      <td>893</td>
-      <td>894</td>
-      <td>895</td>
-      <td>896</td>
-      <td>897</td>
-      <td>898</td>
-      <td>899</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>0</td>
-      <td>1</td>
-      <td>2</td>
-      <td>9</td>
-      <td>4</td>
-      <td>5</td>
-      <td>6</td>
-      <td>7</td>
-      <td>8</td>
-      <td>9</td>
-      <td>...</td>
-      <td>890</td>
-      <td>891</td>
-      <td>892</td>
-      <td>893</td>
-      <td>894</td>
-      <td>895</td>
-      <td>896</td>
-      <td>897</td>
-      <td>898</td>
-      <td>899</td>
-    </tr>
-  </tbody>
-</table>
-<p>5 rows × 900 columns</p>
-</div>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -12151,7 +11917,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># We might create a Series from a list:</span>
@@ -12162,30 +11928,6 @@ div#notebook {
 </pre></div>
 
 </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[6]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>0    student1
-1    student2
-2    student3
-3    student4
-dtype: object</pre>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -12201,7 +11943,7 @@ dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">named_list_series</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="s2">&quot;student1&quot;</span><span class="p">,</span> <span class="s2">&quot;student2&quot;</span><span class="p">,</span> <span class="s2">&quot;student3&quot;</span><span class="p">,</span> <span class="s2">&quot;student4&quot;</span><span class="p">],</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;student_name&quot;</span><span class="p">)</span>
@@ -12210,30 +11952,6 @@ dtype: object</pre>
 </pre></div>
 
 </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[7]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>0    student1
-1    student2
-2    student3
-3    student4
-Name: student_name, dtype: object</pre>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -12249,7 +11967,7 @@ Name: student_name, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">named_list_series</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
@@ -12259,58 +11977,16 @@ Name: student_name, dtype: object</pre>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[8]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&#39;student1&#39;</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">named_list_series</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
 </pre></div>
 
 </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[9]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>0    student1
-1    student2
-Name: student_name, dtype: object</pre>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -12326,7 +12002,7 @@ Name: student_name, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">year_series</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">1990</span><span class="p">,</span> <span class="mi">1991</span><span class="p">,</span> <span class="mi">1992</span><span class="p">,</span> <span class="mi">1993</span><span class="p">])</span>
@@ -12339,70 +12015,6 @@ Name: student_name, dtype: object</pre>
 </pre></div>
 
 </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[10]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>year</th>
-      <th>pop</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1990</td>
-      <td>1.5</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>1991</td>
-      <td>1.6</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>1992</td>
-      <td>1.8</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>1993</td>
-      <td>2.0</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -12430,7 +12042,7 @@ Name: student_name, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Loading from a character-delimited file using explicit settings for delimiter, </span>
@@ -12450,91 +12062,10 @@ Name: student_name, dtype: object</pre>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[11]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Year</th>
-      <th>NYC_Pop</th>
-      <th>Consumption</th>
-      <th>PerCapita_Consumption</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1979</td>
-      <td>7102100</td>
-      <td>1512</td>
-      <td>213</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>1980</td>
-      <td>7071639</td>
-      <td>1506</td>
-      <td>213</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>1981</td>
-      <td>7089241</td>
-      <td>1309</td>
-      <td>185</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>1982</td>
-      <td>7109105</td>
-      <td>1382</td>
-      <td>194</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>1983</td>
-      <td>7181224</td>
-      <td>1424</td>
-      <td>198</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Rearranging column order</span>
@@ -12545,87 +12076,6 @@ Name: student_name, dtype: object</pre>
 </pre></div>
 
 </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[12]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Year</th>
-      <th>NYC_Pop</th>
-      <th>PerCapita_Consumption</th>
-      <th>Consumption</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1979</td>
-      <td>7102100</td>
-      <td>213</td>
-      <td>1512</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>1980</td>
-      <td>7071639</td>
-      <td>213</td>
-      <td>1506</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>1981</td>
-      <td>7089241</td>
-      <td>185</td>
-      <td>1309</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>1982</td>
-      <td>7109105</td>
-      <td>194</td>
-      <td>1382</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>1983</td>
-      <td>7181224</td>
-      <td>198</td>
-      <td>1424</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -12640,7 +12090,7 @@ Name: student_name, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># We create an empty dataframe, then add 1 or more rows, each as dataframes with columns aligned with the original</span>
@@ -12669,66 +12119,6 @@ Name: student_name, dtype: object</pre>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[13]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Year</th>
-      <th>NYC_Pop</th>
-      <th>PerCapita_Consumption</th>
-      <th>Consumption</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1984</td>
-      <td>8102100</td>
-      <td>188</td>
-      <td>1302</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>1985</td>
-      <td>8902100</td>
-      <td>176</td>
-      <td>1203</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
@@ -12741,7 +12131,7 @@ Name: student_name, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># We can grab one or more columns either by column index location, or by column name</span>
@@ -12755,35 +12145,10 @@ Name: student_name, dtype: object</pre>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[14]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>0    1979
-1    1980
-2    1981
-3    1982
-4    1983
-Name: Year, dtype: int64</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Note that a single column subsetted from a dataframe is a Series</span>
@@ -12795,30 +12160,10 @@ Name: Year, dtype: int64</pre>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[15]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>pandas.core.series.Series</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Extracting multiple columns. Note that we pass multiple column names as a list</span>
@@ -12832,79 +12177,10 @@ Name: Year, dtype: int64</pre>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[16]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Year</th>
-      <th>NYC_Pop</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1979</td>
-      <td>7102100</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>1980</td>
-      <td>7071639</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>1981</td>
-      <td>7089241</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>1982</td>
-      <td>7109105</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>1983</td>
-      <td>7181224</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Pulling multiple columns gives us a dataframe!</span>
@@ -12913,26 +12189,6 @@ Name: Year, dtype: int64</pre>
 </pre></div>
 
 </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[17]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>pandas.core.frame.DataFrame</pre>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -12947,7 +12203,7 @@ Name: Year, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sub3_df_from_csv</span> <span class="o">=</span> <span class="n">df_from_csv</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>
@@ -12956,66 +12212,6 @@ Name: Year, dtype: int64</pre>
 </pre></div>
 
 </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[18]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Year</th>
-      <th>NYC_Pop</th>
-      <th>PerCapita_Consumption</th>
-      <th>Consumption</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>2</th>
-      <td>1981</td>
-      <td>7089241</td>
-      <td>185</td>
-      <td>1309</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>1982</td>
-      <td>7109105</td>
-      <td>194</td>
-      <td>1382</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -13033,7 +12229,7 @@ Name: Year, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># First two rows, third and fourth column only</span>
@@ -13045,64 +12241,10 @@ Name: Year, dtype: int64</pre>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[19]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>PerCapita_Consumption</th>
-      <th>Consumption</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>213</td>
-      <td>1512</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>213</td>
-      <td>1506</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># All rows, second column only</span>
@@ -13114,68 +12256,10 @@ Name: Year, dtype: int64</pre>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[20]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>0     7102100
-1     7071639
-2     7089241
-3     7109105
-4     7181224
-5     7234514
-6     7274054
-7     7319246
-8     7342476
-9     7353719
-10    7344175
-11    7335650
-12    7374501
-13    7428944
-14    7506166
-15    7570458
-16    7633040
-17    7697812
-18    7773443
-19    7858259
-20    7947660
-21    8008278
-22    8024964
-23    8041649
-24    8058335
-25    8075020
-26    8091706
-27    8108391
-28    8125077
-29    8141762
-30    8158448
-31    8175133
-32    8175133
-33    8336697
-34    8405837
-35    8491079
-36    8550405
-37    8537673
-Name: NYC_Pop, dtype: int64</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Third row, all columns</span>
@@ -13184,59 +12268,6 @@ Name: NYC_Pop, dtype: int64</pre>
 </pre></div>
 
 </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[21]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Year</th>
-      <th>NYC_Pop</th>
-      <th>PerCapita_Consumption</th>
-      <th>Consumption</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>2</th>
-      <td>1981</td>
-      <td>7089241</td>
-      <td>185</td>
-      <td>1309</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -13256,7 +12287,7 @@ Name: NYC_Pop, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Selecting all rows, but only the Year and NYC_Pop columns:</span>
@@ -13268,79 +12299,10 @@ Name: NYC_Pop, dtype: int64</pre>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[22]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Year</th>
-      <th>NYC_Pop</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1979</td>
-      <td>7102100</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>1980</td>
-      <td>7071639</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>1981</td>
-      <td>7089241</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>1982</td>
-      <td>7109105</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>1983</td>
-      <td>7181224</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># We also have an option to pass two or more column labels, even if non-adjacent, to select columns we want:</span>
@@ -13352,79 +12314,10 @@ Name: NYC_Pop, dtype: int64</pre>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[23]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Year</th>
-      <th>Consumption</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1979</td>
-      <td>1512</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>1980</td>
-      <td>1506</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>1981</td>
-      <td>1309</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>1982</td>
-      <td>1382</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>1983</td>
-      <td>1424</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Understand that the first parameter, the &quot;row&quot; label, is actually the column that serves as an index.</span>
@@ -13437,32 +12330,10 @@ Name: NYC_Pop, dtype: int64</pre>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[24]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>Year           1979
-Consumption    1512
-Name: 0, dtype: int64</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># However, keep in mind that we can set one of our columns to be an index, </span>
@@ -13477,120 +12348,16 @@ Name: 0, dtype: int64</pre>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[25]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>NYC_Pop</th>
-      <th>PerCapita_Consumption</th>
-      <th>Consumption</th>
-    </tr>
-    <tr>
-      <th>Year</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>1979</th>
-      <td>7102100</td>
-      <td>213</td>
-      <td>1512</td>
-    </tr>
-    <tr>
-      <th>1980</th>
-      <td>7071639</td>
-      <td>213</td>
-      <td>1506</td>
-    </tr>
-    <tr>
-      <th>1981</th>
-      <td>7089241</td>
-      <td>185</td>
-      <td>1309</td>
-    </tr>
-    <tr>
-      <th>1982</th>
-      <td>7109105</td>
-      <td>194</td>
-      <td>1382</td>
-    </tr>
-    <tr>
-      <th>1983</th>
-      <td>7181224</td>
-      <td>198</td>
-      <td>1424</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_newindex</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">1981</span><span class="p">,</span> <span class="p">:]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
 
 </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[26]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>NYC_Pop                  7089241
-PerCapita_Consumption        185
-Consumption                 1309
-Name: 1981, dtype: int64</pre>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -13606,7 +12373,7 @@ Name: 1981, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_from_csv</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_from_csv</span><span class="o">.</span><span class="n">Year</span> <span class="o">&lt;</span> <span class="mi">1983</span><span class="p">]</span>
@@ -13616,84 +12383,10 @@ Name: 1981, dtype: int64</pre>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[27]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Year</th>
-      <th>NYC_Pop</th>
-      <th>PerCapita_Consumption</th>
-      <th>Consumption</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1979</td>
-      <td>7102100</td>
-      <td>213</td>
-      <td>1512</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>1980</td>
-      <td>7071639</td>
-      <td>213</td>
-      <td>1506</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>1981</td>
-      <td>7089241</td>
-      <td>185</td>
-      <td>1309</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>1982</td>
-      <td>7109105</td>
-      <td>194</td>
-      <td>1382</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Alternatively, same thing:</span>
@@ -13702,80 +12395,6 @@ Name: 1981, dtype: int64</pre>
 </pre></div>
 
 </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[28]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Year</th>
-      <th>NYC_Pop</th>
-      <th>PerCapita_Consumption</th>
-      <th>Consumption</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1979</td>
-      <td>7102100</td>
-      <td>213</td>
-      <td>1512</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>1980</td>
-      <td>7071639</td>
-      <td>213</td>
-      <td>1506</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>1981</td>
-      <td>7089241</td>
-      <td>185</td>
-      <td>1309</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>1982</td>
-      <td>7109105</td>
-      <td>194</td>
-      <td>1382</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -13791,7 +12410,7 @@ Name: 1981, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Note that we use | (pipe) and &amp; for &quot;OR&quot; and &quot;AND&quot; Booleans, respectively. We MUST use parentheses </span>
@@ -13804,91 +12423,10 @@ Name: 1981, dtype: int64</pre>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[29]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Year</th>
-      <th>NYC_Pop</th>
-      <th>PerCapita_Consumption</th>
-      <th>Consumption</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1979</td>
-      <td>7102100</td>
-      <td>213</td>
-      <td>1512</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>1980</td>
-      <td>7071639</td>
-      <td>213</td>
-      <td>1506</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>1981</td>
-      <td>7089241</td>
-      <td>185</td>
-      <td>1309</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>1982</td>
-      <td>7109105</td>
-      <td>194</td>
-      <td>1382</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>1989</td>
-      <td>7344175</td>
-      <td>191</td>
-      <td>1402</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Using more than one AND/OR and added parentheses to clarify</span>
@@ -13897,80 +12435,6 @@ Name: 1981, dtype: int64</pre>
 </pre></div>
 
 </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[30]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Year</th>
-      <th>NYC_Pop</th>
-      <th>PerCapita_Consumption</th>
-      <th>Consumption</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1979</td>
-      <td>7102100</td>
-      <td>213</td>
-      <td>1512</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>1980</td>
-      <td>7071639</td>
-      <td>213</td>
-      <td>1506</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>1982</td>
-      <td>7109105</td>
-      <td>194</td>
-      <td>1382</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>1989</td>
-      <td>7344175</td>
-      <td>191</td>
-      <td>1402</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -13988,71 +12452,13 @@ Name: 1981, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_from_csv</span><span class="o">.</span><span class="n">Year</span> <span class="o">&lt;</span> <span class="mi">1983</span>
 </pre></div>
 
 </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[31]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>0      True
-1      True
-2      True
-3      True
-4     False
-5     False
-6     False
-7     False
-8     False
-9     False
-10    False
-11    False
-12    False
-13    False
-14    False
-15    False
-16    False
-17    False
-18    False
-19    False
-20    False
-21    False
-22    False
-23    False
-24    False
-25    False
-26    False
-27    False
-28    False
-29    False
-30    False
-31    False
-32    False
-33    False
-34    False
-35    False
-36    False
-37    False
-Name: Year, dtype: bool</pre>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -14078,7 +12484,7 @@ Name: Year, dtype: bool</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_from_csv</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="p">:]</span>
@@ -14088,63 +12494,10 @@ Name: Year, dtype: bool</pre>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[32]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Year</th>
-      <th>NYC_Pop</th>
-      <th>PerCapita_Consumption</th>
-      <th>Consumption</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1979</td>
-      <td>7102100</td>
-      <td>213</td>
-      <td>1512</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_from_csv</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;Consumption&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1548</span>
@@ -14156,63 +12509,10 @@ Name: Year, dtype: bool</pre>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[33]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Year</th>
-      <th>NYC_Pop</th>
-      <th>PerCapita_Consumption</th>
-      <th>Consumption</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1979</td>
-      <td>7102100</td>
-      <td>213</td>
-      <td>1548</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># We can also do quick calculated values across all rows and set the results on a new column</span>
@@ -14223,93 +12523,6 @@ Name: Year, dtype: bool</pre>
 </pre></div>
 
 </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[34]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Year</th>
-      <th>NYC_Pop</th>
-      <th>PerCapita_Consumption</th>
-      <th>Consumption</th>
-      <th>Consumption_per_10000</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1979</td>
-      <td>7102100</td>
-      <td>213</td>
-      <td>1548</td>
-      <td>0.1548</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>1980</td>
-      <td>7071639</td>
-      <td>213</td>
-      <td>1506</td>
-      <td>0.1506</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>1981</td>
-      <td>7089241</td>
-      <td>185</td>
-      <td>1309</td>
-      <td>0.1309</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>1982</td>
-      <td>7109105</td>
-      <td>194</td>
-      <td>1382</td>
-      <td>0.1382</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>1983</td>
-      <td>7181224</td>
-      <td>198</td>
-      <td>1424</td>
-      <td>0.1424</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -14326,7 +12539,7 @@ Name: Year, dtype: bool</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[48]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_from_csv</span><span class="p">[</span><span class="s2">&quot;Consumption_per_10000&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_from_csv</span><span class="p">[</span><span class="s2">&quot;Consumption_per_10000&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="nb">round</span><span class="p">)</span>
@@ -14338,109 +12551,10 @@ Name: Year, dtype: bool</pre>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[48]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Year</th>
-      <th>NYC_Pop</th>
-      <th>PerCapita_Consumption</th>
-      <th>Consumption</th>
-      <th>Consumption_per_10000</th>
-      <th>Consumption_high</th>
-      <th>Total_sum</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1979</td>
-      <td>7102100</td>
-      <td>213</td>
-      <td>1548</td>
-      <td>0</td>
-      <td>Y</td>
-      <td>2548</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>1980</td>
-      <td>7071639</td>
-      <td>213</td>
-      <td>1506</td>
-      <td>0</td>
-      <td>Y</td>
-      <td>2506</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>1981</td>
-      <td>7089241</td>
-      <td>185</td>
-      <td>1309</td>
-      <td>0</td>
-      <td>N</td>
-      <td>2309</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>1982</td>
-      <td>7109105</td>
-      <td>194</td>
-      <td>1382</td>
-      <td>0</td>
-      <td>N</td>
-      <td>2382</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>1983</td>
-      <td>7181224</td>
-      <td>198</td>
-      <td>1424</td>
-      <td>0</td>
-      <td>N</td>
-      <td>2424</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[49]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Alternative using a function you write yourself.</span>
@@ -14460,109 +12574,10 @@ Name: Year, dtype: bool</pre>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[49]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Year</th>
-      <th>NYC_Pop</th>
-      <th>PerCapita_Consumption</th>
-      <th>Consumption</th>
-      <th>Consumption_per_10000</th>
-      <th>Consumption_high</th>
-      <th>Total_sum</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1979</td>
-      <td>7102100</td>
-      <td>213</td>
-      <td>1548</td>
-      <td>0</td>
-      <td>Y</td>
-      <td>2548</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>1980</td>
-      <td>7071639</td>
-      <td>213</td>
-      <td>1506</td>
-      <td>0</td>
-      <td>Y</td>
-      <td>2506</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>1981</td>
-      <td>7089241</td>
-      <td>185</td>
-      <td>1309</td>
-      <td>0</td>
-      <td>N</td>
-      <td>2309</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>1982</td>
-      <td>7109105</td>
-      <td>194</td>
-      <td>1382</td>
-      <td>0</td>
-      <td>N</td>
-      <td>2382</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>1983</td>
-      <td>7181224</td>
-      <td>198</td>
-      <td>1424</td>
-      <td>0</td>
-      <td>N</td>
-      <td>2424</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[50]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># And a final example, using a quick lambda function</span>
@@ -14573,105 +12588,6 @@ Name: Year, dtype: bool</pre>
 </pre></div>
 
 </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[50]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Year</th>
-      <th>NYC_Pop</th>
-      <th>PerCapita_Consumption</th>
-      <th>Consumption</th>
-      <th>Consumption_per_10000</th>
-      <th>Consumption_high</th>
-      <th>Total_sum</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1979</td>
-      <td>7102100</td>
-      <td>213</td>
-      <td>1548</td>
-      <td>0</td>
-      <td>Y</td>
-      <td>2548</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>1980</td>
-      <td>7071639</td>
-      <td>213</td>
-      <td>1506</td>
-      <td>0</td>
-      <td>Y</td>
-      <td>2506</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>1981</td>
-      <td>7089241</td>
-      <td>185</td>
-      <td>1309</td>
-      <td>0</td>
-      <td>N</td>
-      <td>2309</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>1982</td>
-      <td>7109105</td>
-      <td>194</td>
-      <td>1382</td>
-      <td>0</td>
-      <td>N</td>
-      <td>2382</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>1983</td>
-      <td>7181224</td>
-      <td>198</td>
-      <td>1424</td>
-      <td>0</td>
-      <td>N</td>
-      <td>2424</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -14688,7 +12604,7 @@ Name: Year, dtype: bool</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Constructing a second table with a plan to use &quot;Year&quot; as our common key</span>
@@ -14706,104 +12622,10 @@ Name: Year, dtype: bool</pre>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[38]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>pop_year</th>
-      <th>density_per_5000</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1979</td>
-      <td>8.9</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>1980</td>
-      <td>8.1</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>1981</td>
-      <td>7.4</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>1982</td>
-      <td>7.2</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>1983</td>
-      <td>6.5</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>1984</td>
-      <td>6.5</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>1985</td>
-      <td>6.0</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>1986</td>
-      <td>5.8</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>1987</td>
-      <td>5.5</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>1988</td>
-      <td>5.4</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">nyc_water_consumption</span>
@@ -14813,159 +12635,10 @@ Name: Year, dtype: bool</pre>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[39]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Year</th>
-      <th>NYC_Pop</th>
-      <th>PerCapita_Consumption</th>
-      <th>Consumption</th>
-      <th>Consumption_per_10000</th>
-      <th>Consumption_high</th>
-      <th>Total_sum</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1979</td>
-      <td>7102100</td>
-      <td>213</td>
-      <td>1548</td>
-      <td>0</td>
-      <td>Y</td>
-      <td>2548</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>1980</td>
-      <td>7071639</td>
-      <td>213</td>
-      <td>1506</td>
-      <td>0</td>
-      <td>Y</td>
-      <td>2506</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>1981</td>
-      <td>7089241</td>
-      <td>185</td>
-      <td>1309</td>
-      <td>0</td>
-      <td>N</td>
-      <td>2309</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>1982</td>
-      <td>7109105</td>
-      <td>194</td>
-      <td>1382</td>
-      <td>0</td>
-      <td>N</td>
-      <td>2382</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>1983</td>
-      <td>7181224</td>
-      <td>198</td>
-      <td>1424</td>
-      <td>0</td>
-      <td>N</td>
-      <td>2424</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>1984</td>
-      <td>7234514</td>
-      <td>203</td>
-      <td>1465</td>
-      <td>0</td>
-      <td>Y</td>
-      <td>2465</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>1985</td>
-      <td>7274054</td>
-      <td>182</td>
-      <td>1326</td>
-      <td>0</td>
-      <td>N</td>
-      <td>2326</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>1986</td>
-      <td>7319246</td>
-      <td>185</td>
-      <td>1351</td>
-      <td>0</td>
-      <td>N</td>
-      <td>2351</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>1987</td>
-      <td>7342476</td>
-      <td>197</td>
-      <td>1447</td>
-      <td>0</td>
-      <td>N</td>
-      <td>2447</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>1988</td>
-      <td>7353719</td>
-      <td>202</td>
-      <td>1484</td>
-      <td>0</td>
-      <td>Y</td>
-      <td>2484</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Performing a join (&quot;merge&quot;) with the year column;</span>
@@ -14981,181 +12654,10 @@ Name: Year, dtype: bool</pre>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[40]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Year</th>
-      <th>NYC_Pop</th>
-      <th>PerCapita_Consumption</th>
-      <th>Consumption</th>
-      <th>Consumption_per_10000</th>
-      <th>Consumption_high</th>
-      <th>Total_sum</th>
-      <th>pop_year</th>
-      <th>density_per_5000</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1979</td>
-      <td>7102100</td>
-      <td>213</td>
-      <td>1548</td>
-      <td>0</td>
-      <td>Y</td>
-      <td>2548</td>
-      <td>1979</td>
-      <td>8.9</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>1980</td>
-      <td>7071639</td>
-      <td>213</td>
-      <td>1506</td>
-      <td>0</td>
-      <td>Y</td>
-      <td>2506</td>
-      <td>1980</td>
-      <td>8.1</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>1981</td>
-      <td>7089241</td>
-      <td>185</td>
-      <td>1309</td>
-      <td>0</td>
-      <td>N</td>
-      <td>2309</td>
-      <td>1981</td>
-      <td>7.4</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>1982</td>
-      <td>7109105</td>
-      <td>194</td>
-      <td>1382</td>
-      <td>0</td>
-      <td>N</td>
-      <td>2382</td>
-      <td>1982</td>
-      <td>7.2</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>1983</td>
-      <td>7181224</td>
-      <td>198</td>
-      <td>1424</td>
-      <td>0</td>
-      <td>N</td>
-      <td>2424</td>
-      <td>1983</td>
-      <td>6.5</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>1984</td>
-      <td>7234514</td>
-      <td>203</td>
-      <td>1465</td>
-      <td>0</td>
-      <td>Y</td>
-      <td>2465</td>
-      <td>1984</td>
-      <td>6.5</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>1985</td>
-      <td>7274054</td>
-      <td>182</td>
-      <td>1326</td>
-      <td>0</td>
-      <td>N</td>
-      <td>2326</td>
-      <td>1985</td>
-      <td>6.0</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>1986</td>
-      <td>7319246</td>
-      <td>185</td>
-      <td>1351</td>
-      <td>0</td>
-      <td>N</td>
-      <td>2351</td>
-      <td>1986</td>
-      <td>5.8</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>1987</td>
-      <td>7342476</td>
-      <td>197</td>
-      <td>1447</td>
-      <td>0</td>
-      <td>N</td>
-      <td>2447</td>
-      <td>1987</td>
-      <td>5.5</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>1988</td>
-      <td>7353719</td>
-      <td>202</td>
-      <td>1484</td>
-      <td>0</td>
-      <td>Y</td>
-      <td>2484</td>
-      <td>1988</td>
-      <td>5.4</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[51]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Let&#39;s say we have a second dataframe with the same type of data, using the same columns.</span>
@@ -15172,79 +12674,10 @@ Name: Year, dtype: bool</pre>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[51]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Year</th>
-      <th>NYC_Pop</th>
-      <th>PerCapita_Consumption</th>
-      <th>Consumption</th>
-      <th>Consumption_per_10000</th>
-      <th>Consumption_high</th>
-      <th>Total_sum</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1989</td>
-      <td>7367819</td>
-      <td>189</td>
-      <td>1456</td>
-      <td>0</td>
-      <td>Y</td>
-      <td>2456</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>1990</td>
-      <td>7406718</td>
-      <td>192</td>
-      <td>1345</td>
-      <td>0</td>
-      <td>Y</td>
-      <td>2345</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># The resulting dataframe will preserve the original row indices of the original respective dataframes</span>
@@ -15256,175 +12689,6 @@ Name: Year, dtype: bool</pre>
 </pre></div>
 
 </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[42]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Year</th>
-      <th>NYC_Pop</th>
-      <th>PerCapita_Consumption</th>
-      <th>Consumption</th>
-      <th>Consumption_per_10000</th>
-      <th>Consumption_high</th>
-      <th>Total_sum</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1979</td>
-      <td>7102100</td>
-      <td>213</td>
-      <td>1548</td>
-      <td>0</td>
-      <td>Y</td>
-      <td>2548</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>1980</td>
-      <td>7071639</td>
-      <td>213</td>
-      <td>1506</td>
-      <td>0</td>
-      <td>Y</td>
-      <td>2506</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>1981</td>
-      <td>7089241</td>
-      <td>185</td>
-      <td>1309</td>
-      <td>0</td>
-      <td>N</td>
-      <td>2309</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>1982</td>
-      <td>7109105</td>
-      <td>194</td>
-      <td>1382</td>
-      <td>0</td>
-      <td>N</td>
-      <td>2382</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>1983</td>
-      <td>7181224</td>
-      <td>198</td>
-      <td>1424</td>
-      <td>0</td>
-      <td>N</td>
-      <td>2424</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>1984</td>
-      <td>7234514</td>
-      <td>203</td>
-      <td>1465</td>
-      <td>0</td>
-      <td>Y</td>
-      <td>2465</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>1985</td>
-      <td>7274054</td>
-      <td>182</td>
-      <td>1326</td>
-      <td>0</td>
-      <td>N</td>
-      <td>2326</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>1986</td>
-      <td>7319246</td>
-      <td>185</td>
-      <td>1351</td>
-      <td>0</td>
-      <td>N</td>
-      <td>2351</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>1987</td>
-      <td>7342476</td>
-      <td>197</td>
-      <td>1447</td>
-      <td>0</td>
-      <td>N</td>
-      <td>2447</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>1988</td>
-      <td>7353719</td>
-      <td>202</td>
-      <td>1484</td>
-      <td>0</td>
-      <td>Y</td>
-      <td>2484</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>1989</td>
-      <td>7367819</td>
-      <td>189</td>
-      <td>1456</td>
-      <td>0</td>
-      <td>Y</td>
-      <td>2456</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>1990</td>
-      <td>7406718</td>
-      <td>192</td>
-      <td>1345</td>
-      <td>0</td>
-      <td>Y</td>
-      <td>2345</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -15440,7 +12704,7 @@ Name: Year, dtype: bool</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Check its size. This dataframe has 38 rows and 7 columns</span>
@@ -15452,30 +12716,10 @@ Name: Year, dtype: bool</pre>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[43]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>(38, 7)</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[44]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Check for nulls; in this case, nulls in any row, any column.</span>
@@ -15487,59 +12731,10 @@ Name: Year, dtype: bool</pre>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[44]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Year</th>
-      <th>NYC_Pop</th>
-      <th>PerCapita_Consumption</th>
-      <th>Consumption</th>
-      <th>Consumption_per_10000</th>
-      <th>Consumption_high</th>
-      <th>Total_sum</th>
-    </tr>
-  </thead>
-  <tbody>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[45]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Check if any given column is unique</span>
@@ -15551,30 +12746,10 @@ Name: Year, dtype: bool</pre>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[45]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>True</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Summary statistics</span>
@@ -15586,130 +12761,10 @@ Name: Year, dtype: bool</pre>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[46]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Year</th>
-      <th>NYC_Pop</th>
-      <th>PerCapita_Consumption</th>
-      <th>Consumption</th>
-      <th>Consumption_per_10000</th>
-      <th>Total_sum</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>count</th>
-      <td>38.000000</td>
-      <td>3.800000e+01</td>
-      <td>38.000000</td>
-      <td>38.000000</td>
-      <td>38.0</td>
-      <td>38.000000</td>
-    </tr>
-    <tr>
-      <th>mean</th>
-      <td>1997.500000</td>
-      <td>7.764553e+06</td>
-      <td>161.552632</td>
-      <td>1241.631579</td>
-      <td>0.0</td>
-      <td>2241.631579</td>
-    </tr>
-    <tr>
-      <th>std</th>
-      <td>11.113055</td>
-      <td>4.610189e+05</td>
-      <td>31.404680</td>
-      <td>173.980493</td>
-      <td>0.0</td>
-      <td>173.980493</td>
-    </tr>
-    <tr>
-      <th>min</th>
-      <td>1979.000000</td>
-      <td>7.071639e+06</td>
-      <td>117.000000</td>
-      <td>996.000000</td>
-      <td>0.0</td>
-      <td>1996.000000</td>
-    </tr>
-    <tr>
-      <th>25%</th>
-      <td>1988.250000</td>
-      <td>7.342901e+06</td>
-      <td>135.250000</td>
-      <td>1095.000000</td>
-      <td>0.0</td>
-      <td>2095.000000</td>
-    </tr>
-    <tr>
-      <th>50%</th>
-      <td>1997.500000</td>
-      <td>7.815851e+06</td>
-      <td>155.500000</td>
-      <td>1238.500000</td>
-      <td>0.0</td>
-      <td>2238.500000</td>
-    </tr>
-    <tr>
-      <th>75%</th>
-      <td>2006.750000</td>
-      <td>8.120906e+06</td>
-      <td>189.500000</td>
-      <td>1378.750000</td>
-      <td>0.0</td>
-      <td>2378.750000</td>
-    </tr>
-    <tr>
-      <th>max</th>
-      <td>2016.000000</td>
-      <td>8.550405e+06</td>
-      <td>213.000000</td>
-      <td>1548.000000</td>
-      <td>0.0</td>
-      <td>2548.000000</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Single column max, min, value counts</span>
@@ -15722,28 +12777,6 @@ Name: Year, dtype: bool</pre>
 </pre></div>
 
 </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>N    6
-Y    4
-Name: Consumption_high, dtype: int64
-7353719
-1309
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
