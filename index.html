@@ -11793,7 +11793,7 @@ div#notebook {
 <p>We will work from this Jupyter Notebook, available on our course JupyterHub instance here: <a href="https://tutorials-1.rcnyu.org">https://tutorials-1.rcnyu.org</a>.</p>
 <p>You are welcome to download and deploy this same Notebook in your own local Jupyter environment. To copy the entire set of teaching materials, clone its repository:</p>
 <p><code>git clone https://github.com/NYU-DataServices/python-cleaning.git</code></p>
-<p>You can also find this notebook (in non-executable form) at <a href="https://nyu-dataservices.github.io/python-cleaning/">https://nyu-dataservices.github.io/python-cleaning/</a>.</p>
+<p>You can also find this notebook (in non-executable form) at <a href="https://nyu-dataservices.github.io/startingpandas">https://nyu-dataservices.github.io/startingpandas</a>.</p>
 
 </div>
 </div>
@@ -11810,7 +11810,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[118]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -11866,7 +11866,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[119]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Update the fourth column of our list of lists</span>
@@ -11899,7 +11899,7 @@ div#notebook {
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>[0, 1, 2, 3, 4]
 [0, 1, 2, 9, 4]
-24.8 ms ± 0 ns per loop (mean ± std. dev. of 1 run, 1 loop each)
+18.4 ms ± 0 ns per loop (mean ± std. dev. of 1 run, 1 loop each)
 </pre>
 </div>
 </div>
@@ -11910,7 +11910,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[120]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">timeit</span> -n 1 -r 1 df_list_lists[3] = df_list_lists[3].apply(lambda x: x*3)
@@ -11932,14 +11932,14 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>7.09 ms ± 0 ns per loop (mean ± std. dev. of 1 run, 1 loop each)
+<pre>10.6 ms ± 0 ns per loop (mean ± std. dev. of 1 run, 1 loop each)
 </pre>
 </div>
 </div>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[120]:</div>
+<div class="prompt output_prompt">Out[5]:</div>
 
 
 
@@ -12127,8 +12127,8 @@ div#notebook {
 <p>Unlike another commonly used matrix library, numpy, Pandas dataframes accommodate tables/matrices that mix integers, strings, and other data types. (Pandas also shares some underlying code with numpy.)</p>
 <h2 id="2.-Building-a-Dataframe:-Series">2. Building a Dataframe: Series<a class="anchor-link" href="#2.-Building-a-Dataframe:-Series">&#182;</a></h2><p>To understand how a dataframe works in Pandas (or any other environment) we can think of the multiple ways we can assemble a two-dimensional table like this:</p>
 <p><img align="left" width="300" src="pandas_table_1.png" alt="A two-dimensional table illustrating how data might be organized"><br/><br/><br/><br/><br/><br/><br/><br/><br/></p>
-<p>Now we might conceive of this table as consisting of three rows, or observations, with each row consisting of elements that are ordered so that they align with a column location that tells us what the value is for any given variable.</p>
-<p>But we also might think of a table as consisting of vertical uniform-length columns, each representing the measurement of single variable across the same number of observations, that are then assembled by stacking them from left to right:</p>
+<p>Now we might conceive of this table as consisting of four rows, or observations, with each row consisting of elements that are ordered so that they align with a column location that tells us what the value is for any given variable.</p>
+<p>But we also might think of a table as consisting of vertical uniform-length columns, each representing the measurement of single variable across the same number of observations, that are then assembled by stacking them side-by-side:</p>
 <p><img align="left" width="350" src="pandas_table_6.png" alt="An image showing how a table is also built out of uniform columns"><br/><br/><br/><br/><br/><br/><br/><br/><br/></p>
 <p>In Python terms, we might think of rows and columns in a table as having some "dictionary-like" qualities, and some "list-like" qualities. For example, the elements of a row can be conceived of values that are each paired with a key corresponding to our column headers (or variables):</p>
 <p><img align="left" width="800" src="pandas_table_3.png" alt="Image showing how we might think of a table row as an equivalent of a Python key-value dictionary"><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/></p>
@@ -12151,7 +12151,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[121]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># We might create a Series from a list:</span>
@@ -12171,7 +12171,7 @@ div#notebook {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[121]:</div>
+<div class="prompt output_prompt">Out[6]:</div>
 
 
 
@@ -12201,7 +12201,7 @@ dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[122]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">named_list_series</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="s2">&quot;student1&quot;</span><span class="p">,</span> <span class="s2">&quot;student2&quot;</span><span class="p">,</span> <span class="s2">&quot;student3&quot;</span><span class="p">,</span> <span class="s2">&quot;student4&quot;</span><span class="p">],</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;student_name&quot;</span><span class="p">)</span>
@@ -12219,7 +12219,7 @@ dtype: object</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[122]:</div>
+<div class="prompt output_prompt">Out[7]:</div>
 
 
 
@@ -12249,7 +12249,7 @@ Name: student_name, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[123]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">named_list_series</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
@@ -12265,7 +12265,7 @@ Name: student_name, dtype: object</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[123]:</div>
+<div class="prompt output_prompt">Out[8]:</div>
 
 
 
@@ -12282,7 +12282,7 @@ Name: student_name, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[124]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">named_list_series</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
@@ -12298,7 +12298,7 @@ Name: student_name, dtype: object</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[124]:</div>
+<div class="prompt output_prompt">Out[9]:</div>
 
 
 
@@ -12326,7 +12326,7 @@ Name: student_name, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[125]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">year_series</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">1990</span><span class="p">,</span> <span class="mi">1991</span><span class="p">,</span> <span class="mi">1992</span><span class="p">,</span> <span class="mi">1993</span><span class="p">])</span>
@@ -12348,7 +12348,7 @@ Name: student_name, dtype: object</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[125]:</div>
+<div class="prompt output_prompt">Out[10]:</div>
 
 
 
@@ -12422,7 +12422,7 @@ Name: student_name, dtype: object</pre>
 <li><p>We can transform a Python complex array (such as a list of lists or a list of dictionaries) into a dataframe</p>
 </li>
 </ol>
-<p>No matter what approach is taken, I recommend taking some time to set the various parameters of the pd.DataFrame object so that your work on the dataframe later has expected results. This includes setting column names, column order, data types of variables, and (when reading from file) encoding.</p>
+<p>No matter which approach is taken, I recommend taking some time to set the various parameters of the pd.DataFrame object so that your work on the dataframe later has expected results. This includes setting column names, column order, data types of variables, and (when reading from file) encoding.</p>
 <p>Here are examples of all three:</p>
 <h4 id="Load-from-CSV/Excel/TSV,-etc.">Load from CSV/Excel/TSV, etc.<a class="anchor-link" href="#Load-from-CSV/Excel/TSV,-etc.">&#182;</a></h4>
 </div>
@@ -12430,7 +12430,7 @@ Name: student_name, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[126]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Loading from a character-delimited file using explicit settings for delimiter, </span>
@@ -12456,7 +12456,7 @@ Name: student_name, dtype: object</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[126]:</div>
+<div class="prompt output_prompt">Out[11]:</div>
 
 
 
@@ -12534,7 +12534,7 @@ Name: student_name, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[127]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Rearranging column order</span>
@@ -12554,7 +12554,7 @@ Name: student_name, dtype: object</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[127]:</div>
+<div class="prompt output_prompt">Out[12]:</div>
 
 
 
@@ -12640,7 +12640,7 @@ Name: student_name, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[128]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># We create an empty dataframe, then add 1 or more rows, each as dataframes with columns aligned with the original</span>
@@ -12675,7 +12675,7 @@ Name: student_name, dtype: object</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[128]:</div>
+<div class="prompt output_prompt">Out[13]:</div>
 
 
 
@@ -12741,7 +12741,7 @@ Name: student_name, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[129]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># We can grab one or more columns either by column index location, or by column name</span>
@@ -12761,7 +12761,7 @@ Name: student_name, dtype: object</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[129]:</div>
+<div class="prompt output_prompt">Out[14]:</div>
 
 
 
@@ -12783,7 +12783,7 @@ Name: Year, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[130]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Note that a single column subsetted from a dataframe is a Series</span>
@@ -12801,7 +12801,7 @@ Name: Year, dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[130]:</div>
+<div class="prompt output_prompt">Out[15]:</div>
 
 
 
@@ -12818,7 +12818,7 @@ Name: Year, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[131]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Extracting multiple columns. Note that we pass multiple column names as a list</span>
@@ -12838,7 +12838,7 @@ Name: Year, dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[131]:</div>
+<div class="prompt output_prompt">Out[16]:</div>
 
 
 
@@ -12904,7 +12904,7 @@ Name: Year, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[132]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Pulling multiple columns gives us a dataframe!</span>
@@ -12922,7 +12922,7 @@ Name: Year, dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[132]:</div>
+<div class="prompt output_prompt">Out[17]:</div>
 
 
 
@@ -12947,7 +12947,7 @@ Name: Year, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[133]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sub3_df_from_csv</span> <span class="o">=</span> <span class="n">df_from_csv</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>
@@ -12965,7 +12965,7 @@ Name: Year, dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[133]:</div>
+<div class="prompt output_prompt">Out[18]:</div>
 
 
 
@@ -13033,7 +13033,7 @@ Name: Year, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[134]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># First two rows, third and fourth column only</span>
@@ -13051,7 +13051,7 @@ Name: Year, dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[134]:</div>
+<div class="prompt output_prompt">Out[19]:</div>
 
 
 
@@ -13102,7 +13102,7 @@ Name: Year, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[135]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># All rows, second column only</span>
@@ -13120,7 +13120,7 @@ Name: Year, dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[135]:</div>
+<div class="prompt output_prompt">Out[20]:</div>
 
 
 
@@ -13175,7 +13175,7 @@ Name: NYC_Pop, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[136]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Third row, all columns</span>
@@ -13193,7 +13193,7 @@ Name: NYC_Pop, dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[136]:</div>
+<div class="prompt output_prompt">Out[21]:</div>
 
 
 
@@ -13247,16 +13247,16 @@ Name: NYC_Pop, dtype: int64</pre>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Filtering-using-index-location:-.loc()">Filtering using index location: .loc()<a class="anchor-link" href="#Filtering-using-index-location:-.loc()">&#182;</a></h4><p>We can also select using the same pattern (colon separated spans, a comma between the row and column decisions), but use a label or Boolean filter to subset.</p>
 <p>The pattern is:</p>
-<p><code>dataframe.loc[row_index_start : row_index_index_stop, column_index_start : column_index_stop]</code></p>
+<p><code>dataframe.loc[row_label(s), column_label(s)]</code></p>
 <p>or, for a Boolean:</p>
-<p><code>dataframe.loc[ True/False test for row values in a column, column_index_start : column_index_stop]</code></p>
+<p><code>dataframe.loc[ True/False test for row values in a column, column_label(s)]</code></p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[137]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Selecting all rows, but only the Year and NYC_Pop columns:</span>
@@ -13274,7 +13274,7 @@ Name: NYC_Pop, dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[137]:</div>
+<div class="prompt output_prompt">Out[22]:</div>
 
 
 
@@ -13340,7 +13340,7 @@ Name: NYC_Pop, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[138]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># We also have an option to pass two or more column labels, even if non-adjacent, to select columns we want:</span>
@@ -13358,7 +13358,7 @@ Name: NYC_Pop, dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[138]:</div>
+<div class="prompt output_prompt">Out[23]:</div>
 
 
 
@@ -13424,7 +13424,7 @@ Name: NYC_Pop, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[139]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Understand that the first parameter, the &quot;row&quot; label, is actually the column that serves as an index.</span>
@@ -13443,7 +13443,7 @@ Name: NYC_Pop, dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[139]:</div>
+<div class="prompt output_prompt">Out[24]:</div>
 
 
 
@@ -13462,7 +13462,7 @@ Name: 0, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[140]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># However, keep in mind that we can set one of our columns to be an index, </span>
@@ -13483,7 +13483,7 @@ Name: 0, dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[140]:</div>
+<div class="prompt output_prompt">Out[25]:</div>
 
 
 
@@ -13561,7 +13561,7 @@ Name: 0, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[141]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_newindex</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">1981</span><span class="p">,</span> <span class="p">:]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
@@ -13577,7 +13577,7 @@ Name: 0, dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[141]:</div>
+<div class="prompt output_prompt">Out[26]:</div>
 
 
 
@@ -13606,7 +13606,7 @@ Name: 1981, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[142]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_from_csv</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_from_csv</span><span class="o">.</span><span class="n">Year</span> <span class="o">&lt;</span> <span class="mi">1983</span><span class="p">]</span>
@@ -13622,7 +13622,7 @@ Name: 1981, dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[142]:</div>
+<div class="prompt output_prompt">Out[27]:</div>
 
 
 
@@ -13693,7 +13693,7 @@ Name: 1981, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[143]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Alternatively, same thing:</span>
@@ -13711,7 +13711,7 @@ Name: 1981, dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[143]:</div>
+<div class="prompt output_prompt">Out[28]:</div>
 
 
 
@@ -13791,7 +13791,7 @@ Name: 1981, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[144]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Note that we use | (pipe) and &amp; for &quot;OR&quot; and &quot;AND&quot; Booleans, respectively. We MUST use parentheses </span>
@@ -13810,7 +13810,7 @@ Name: 1981, dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[144]:</div>
+<div class="prompt output_prompt">Out[29]:</div>
 
 
 
@@ -13888,7 +13888,7 @@ Name: 1981, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[145]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Using more than one AND/OR and added parentheses to clarify</span>
@@ -13906,7 +13906,7 @@ Name: 1981, dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[145]:</div>
+<div class="prompt output_prompt">Out[30]:</div>
 
 
 
@@ -13988,7 +13988,7 @@ Name: 1981, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[146]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_from_csv</span><span class="o">.</span><span class="n">Year</span> <span class="o">&lt;</span> <span class="mi">1983</span>
@@ -14004,7 +14004,7 @@ Name: 1981, dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[146]:</div>
+<div class="prompt output_prompt">Out[31]:</div>
 
 
 
@@ -14078,7 +14078,7 @@ Name: Year, dtype: bool</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[147]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_from_csv</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="p">:]</span>
@@ -14094,7 +14094,7 @@ Name: Year, dtype: bool</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[147]:</div>
+<div class="prompt output_prompt">Out[32]:</div>
 
 
 
@@ -14144,7 +14144,7 @@ Name: Year, dtype: bool</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[148]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_from_csv</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;Consumption&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1548</span>
@@ -14162,7 +14162,7 @@ Name: Year, dtype: bool</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[148]:</div>
+<div class="prompt output_prompt">Out[33]:</div>
 
 
 
@@ -14212,7 +14212,7 @@ Name: Year, dtype: bool</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[149]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># We can also do quick calculated values across all rows and set the results on a new column</span>
@@ -14232,7 +14232,7 @@ Name: Year, dtype: bool</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[149]:</div>
+<div class="prompt output_prompt">Out[34]:</div>
 
 
 
@@ -14319,14 +14319,14 @@ Name: Year, dtype: bool</pre>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="A-very-helpful-approach:-dataframe.apply()">A very helpful approach: dataframe.apply()<a class="anchor-link" href="#A-very-helpful-approach:-dataframe.apply()">&#182;</a></h4><p>A great feature of Pandas is the .apply() method which enables you to apply some kind of transformative function, either one you write yourself or something you pull from Python's core library, and propagate it across any portion of the dataframe you wish to change.</p>
-<p>We can start with Python core function:</p>
+<p>We can start with an example using a Python core function:</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[150]:</div>
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_from_csv</span><span class="p">[</span><span class="s2">&quot;Consumption_per_10000&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_from_csv</span><span class="p">[</span><span class="s2">&quot;Consumption_per_10000&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="nb">round</span><span class="p">)</span>
@@ -14344,117 +14344,7 @@ Name: Year, dtype: bool</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[150]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Year</th>
-      <th>NYC_Pop</th>
-      <th>PerCapita_Consumption</th>
-      <th>Consumption</th>
-      <th>Consumption_per_10000</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1979</td>
-      <td>7102100</td>
-      <td>213</td>
-      <td>1548</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>1980</td>
-      <td>7071639</td>
-      <td>213</td>
-      <td>1506</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>1981</td>
-      <td>7089241</td>
-      <td>185</td>
-      <td>1309</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>1982</td>
-      <td>7109105</td>
-      <td>194</td>
-      <td>1382</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>1983</td>
-      <td>7181224</td>
-      <td>198</td>
-      <td>1424</td>
-      <td>0</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[151]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Alternative using a function you write yourself. We use axis=0 here to apply this function </span>
-
-<span class="k">def</span> <span class="nf">check_if_high</span><span class="p">(</span><span class="n">in_val</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">in_val</span> <span class="o">&gt;</span> <span class="mi">200</span><span class="p">:</span>
-        <span class="k">return</span> <span class="s2">&quot;Y&quot;</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="s2">&quot;N&quot;</span>
-    
-<span class="n">df_from_csv</span><span class="p">[</span><span class="s2">&quot;Consumption_high&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_from_csv</span><span class="p">[</span><span class="s2">&quot;PerCapita_Consumption&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">check_if_high</span><span class="p">)</span>    
-
-<span class="n">df_from_csv</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[151]:</div>
+<div class="prompt output_prompt">Out[48]:</div>
 
 
 
@@ -14483,6 +14373,7 @@ Name: Year, dtype: bool</pre>
       <th>Consumption</th>
       <th>Consumption_per_10000</th>
       <th>Consumption_high</th>
+      <th>Total_sum</th>
     </tr>
   </thead>
   <tbody>
@@ -14494,6 +14385,7 @@ Name: Year, dtype: bool</pre>
       <td>1548</td>
       <td>0</td>
       <td>Y</td>
+      <td>2548</td>
     </tr>
     <tr>
       <th>1</th>
@@ -14503,6 +14395,7 @@ Name: Year, dtype: bool</pre>
       <td>1506</td>
       <td>0</td>
       <td>Y</td>
+      <td>2506</td>
     </tr>
     <tr>
       <th>2</th>
@@ -14512,6 +14405,7 @@ Name: Year, dtype: bool</pre>
       <td>1309</td>
       <td>0</td>
       <td>N</td>
+      <td>2309</td>
     </tr>
     <tr>
       <th>3</th>
@@ -14521,6 +14415,7 @@ Name: Year, dtype: bool</pre>
       <td>1382</td>
       <td>0</td>
       <td>N</td>
+      <td>2382</td>
     </tr>
     <tr>
       <th>4</th>
@@ -14530,6 +14425,7 @@ Name: Year, dtype: bool</pre>
       <td>1424</td>
       <td>0</td>
       <td>N</td>
+      <td>2424</td>
     </tr>
   </tbody>
 </table>
@@ -14544,7 +14440,129 @@ Name: Year, dtype: bool</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[152]:</div>
+<div class="prompt input_prompt">In&nbsp;[49]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Alternative using a function you write yourself.</span>
+
+<span class="k">def</span> <span class="nf">check_if_high</span><span class="p">(</span><span class="n">in_val</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">in_val</span> <span class="o">&gt;</span> <span class="mi">200</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;Y&quot;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;N&quot;</span>
+    
+<span class="n">df_from_csv</span><span class="p">[</span><span class="s2">&quot;Consumption_high&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_from_csv</span><span class="p">[</span><span class="s2">&quot;PerCapita_Consumption&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">check_if_high</span><span class="p">)</span>    
+
+<span class="n">df_from_csv</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[49]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Year</th>
+      <th>NYC_Pop</th>
+      <th>PerCapita_Consumption</th>
+      <th>Consumption</th>
+      <th>Consumption_per_10000</th>
+      <th>Consumption_high</th>
+      <th>Total_sum</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1979</td>
+      <td>7102100</td>
+      <td>213</td>
+      <td>1548</td>
+      <td>0</td>
+      <td>Y</td>
+      <td>2548</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1980</td>
+      <td>7071639</td>
+      <td>213</td>
+      <td>1506</td>
+      <td>0</td>
+      <td>Y</td>
+      <td>2506</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1981</td>
+      <td>7089241</td>
+      <td>185</td>
+      <td>1309</td>
+      <td>0</td>
+      <td>N</td>
+      <td>2309</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1982</td>
+      <td>7109105</td>
+      <td>194</td>
+      <td>1382</td>
+      <td>0</td>
+      <td>N</td>
+      <td>2382</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1983</td>
+      <td>7181224</td>
+      <td>198</td>
+      <td>1424</td>
+      <td>0</td>
+      <td>N</td>
+      <td>2424</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[50]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># And a final example, using a quick lambda function</span>
@@ -14564,7 +14582,7 @@ Name: Year, dtype: bool</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[152]:</div>
+<div class="prompt output_prompt">Out[50]:</div>
 
 
 
@@ -14670,7 +14688,7 @@ Name: Year, dtype: bool</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[153]:</div>
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Constructing a second table with a plan to use &quot;Year&quot; as our common key</span>
@@ -14694,7 +14712,7 @@ Name: Year, dtype: bool</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[153]:</div>
+<div class="prompt output_prompt">Out[38]:</div>
 
 
 
@@ -14785,7 +14803,7 @@ Name: Year, dtype: bool</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[154]:</div>
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">nyc_water_consumption</span>
@@ -14801,7 +14819,7 @@ Name: Year, dtype: bool</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[154]:</div>
+<div class="prompt output_prompt">Out[39]:</div>
 
 
 
@@ -14947,7 +14965,7 @@ Name: Year, dtype: bool</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[155]:</div>
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Performing a join (&quot;merge&quot;) with the year column;</span>
@@ -14969,7 +14987,7 @@ Name: Year, dtype: bool</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[155]:</div>
+<div class="prompt output_prompt">Out[40]:</div>
 
 
 
@@ -15137,11 +15155,11 @@ Name: Year, dtype: bool</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[156]:</div>
+<div class="prompt input_prompt">In&nbsp;[51]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Let&#39;s say we have a second dataframe with the same type of data, using the same columns.</span>
-<span class="c1"># We perform a concatenation in which the second dataframe becomes additional roles on the original</span>
+<span class="c1"># We perform a concatenation in which the second dataframe becomes additional row on the original</span>
 
 <span class="n">additional_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([[</span><span class="mi">1989</span><span class="p">,</span><span class="mi">7367819</span><span class="p">,</span> <span class="mi">189</span><span class="p">,</span> <span class="mi">1456</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;Y&quot;</span><span class="p">,</span> <span class="mi">2456</span><span class="p">],[</span><span class="mi">1990</span><span class="p">,</span><span class="mi">7406718</span><span class="p">,</span> <span class="mi">192</span><span class="p">,</span> <span class="mi">1345</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;Y&quot;</span><span class="p">,</span> <span class="s2">&quot;2345&quot;</span><span class="p">]],</span>
                          <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Year&quot;</span><span class="p">,</span><span class="s2">&quot;NYC_Pop&quot;</span><span class="p">,</span><span class="s2">&quot;PerCapita_Consumption&quot;</span><span class="p">,</span>
@@ -15160,7 +15178,7 @@ Name: Year, dtype: bool</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[156]:</div>
+<div class="prompt output_prompt">Out[51]:</div>
 
 
 
@@ -15226,7 +15244,7 @@ Name: Year, dtype: bool</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[157]:</div>
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># The resulting dataframe will preserve the original row indices of the original respective dataframes</span>
@@ -15247,7 +15265,7 @@ Name: Year, dtype: bool</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[157]:</div>
+<div class="prompt output_prompt">Out[42]:</div>
 
 
 
@@ -15422,7 +15440,7 @@ Name: Year, dtype: bool</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[158]:</div>
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Check its size. This dataframe has 38 rows and 7 columns</span>
@@ -15440,7 +15458,7 @@ Name: Year, dtype: bool</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[158]:</div>
+<div class="prompt output_prompt">Out[43]:</div>
 
 
 
@@ -15457,7 +15475,7 @@ Name: Year, dtype: bool</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[159]:</div>
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Check for nulls; in this case, nulls in any row, any column.</span>
@@ -15475,7 +15493,7 @@ Name: Year, dtype: bool</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[159]:</div>
+<div class="prompt output_prompt">Out[44]:</div>
 
 
 
@@ -15521,7 +15539,7 @@ Name: Year, dtype: bool</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[160]:</div>
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Check if any given column is unique</span>
@@ -15539,7 +15557,7 @@ Name: Year, dtype: bool</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[160]:</div>
+<div class="prompt output_prompt">Out[45]:</div>
 
 
 
@@ -15556,7 +15574,7 @@ Name: Year, dtype: bool</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[161]:</div>
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Summary statistics</span>
@@ -15574,7 +15592,7 @@ Name: Year, dtype: bool</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[161]:</div>
+<div class="prompt output_prompt">Out[46]:</div>
 
 
 
@@ -15691,7 +15709,7 @@ Name: Year, dtype: bool</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[162]:</div>
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Single column max, min, value counts</span>
