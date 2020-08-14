@@ -24,4 +24,4 @@ You are welcome to download and deploy this same Notebook in your own local Jupy
 
 <code>git clone https://github.com/NYU-DataServices/startingpandas.git</code>
 
-You can also find this notebook (in non-executable form) at <a href="https://nyu-dataservices.github.io/python-cleaning/">https://nyu-dataservices.github.io/python-cleaning/</a>.
+You can also find this notebook (in non-executable form) at <a href="https://nyu-dataservices.github.io/python-cleaning/">https://nyu-dataservices.github.io/startingpandas</a>.
