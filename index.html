@@ -12947,8 +12947,13 @@ ul.typeahead-list  > li > a.pull-right {
 /*# sourceMappingURL=style.min.css.map */
     </style>
 <style type="text/css">
-    .highlight .hll { background-color: #ffffcc }
-.highlight  { background: #f8f8f8; }
+    pre { line-height: 125%; }
+td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+.highlight .hll { background-color: #ffffcc }
+.highlight { background: #f8f8f8; }
 .highlight .c { color: #408080; font-style: italic } /* Comment */
 .highlight .err { border: 1px solid #FF0000 } /* Error */
 .highlight .k { color: #008000; font-weight: bold } /* Keyword */
@@ -13092,10 +13097,20 @@ div#notebook {
 <li>Exporting a dataframe to a saved file</li>
 </ul>
 <p><strong>Materials</strong></p>
-<p>We will work from this Jupyter Notebook, available on our course JupyterHub instance here: <a href="https://tutorials-1.rcnyu.org">https://tutorials-1.rcnyu.org</a>.</p>
-<p>You are welcome to download and deploy this same Notebook in your own local Jupyter environment. To copy the entire set of teaching materials, clone its repository:</p>
+<p>You can always find this notebook (in non-executable form) at <a href="https://nyu-dataservices.github.io/startingpandas">https://nyu-dataservices.github.io/startingpandas</a>.</p>
+<p>We'll be using this Jupyter Notebook as a basis for the lesson. You can access the code/notebooks for this class in the following ways:</p>
+<p><em>If you do not have Python, Pandas, and Jupyter Notebooks installed:</em></p>
+<ul>
+<li>Use the Jupyter Notebook available on our course JupyterHub instance here: <a href="https://tutorials-1.rcnyu.org">https://tutorials-1.rcnyu.org</a>. Navigate to the "shared" directory, then to RDM_StartingPandas, and then open the file "session-notebook-complete.ipynb". You will need to change the kernel to "RDM_Main." You will then be able to run and edit the code, but not save any changes. We will go over how to access this browser-based notebook in class.</li>
+</ul>
+<p><em>If you have Jupyter Notebooks and Pandas installed on your laptop:</em></p>
+<ul>
+<li>You can clone this repository and open the "session-notebook-complete.ipynb" file:</li>
+</ul>
 <p><code>git clone https://github.com/NYU-DataServices/startingpandas.git</code></p>
-<p>You can also find this notebook (in non-executable form) at <a href="https://nyu-dataservices.github.io/startingpandas">https://nyu-dataservices.github.io/startingpandas</a>.</p>
+<ul>
+<li>Or you can download the materials by visiting <a href="https://github.com/NYU-DataServices/startingpandas">https://github.com/NYU-DataServices/startingpandas</a>. Select the green code/clone button at the top, and select "Download Zip." Once you have the downloaded zip package, unzip it and open the "session-notebook-complete.ipynb" file.</li>
+</ul>
 
 </div>
 </div>
@@ -13426,6 +13441,19 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_from_csv</span><span class="p">[</span><span class="s2">&quot;Year&quot;</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># We can grab one or more columns either by column index location, or by column name</span>
 
 <span class="n">sub_df_from_csv</span> <span class="o">=</span> <span class="n">df_from_csv</span><span class="p">[</span><span class="s2">&quot;Year&quot;</span><span class="p">]</span>
@@ -13510,6 +13538,31 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<hr/>
+
+<h3 id="Challenge">Challenge<a class="anchor-link" href="#Challenge">&#182;</a></h3><p>What snippet of code would you use to slice out the 12th, 13th, and 14th rows and the columns "NYC_Pop" and "PerCapita_Consumption"?</p>
+<hr/>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Add Answer</span>
+
+<span class="n">df_from_csv</span><span class="p">[</span>  <span class="p">[</span><span class="s2">&quot;NYC_Pop&quot;</span><span class="p">,</span> <span class="s2">&quot;PerCapita_Consumption&quot;</span><span class="p">]</span>    <span class="p">][</span><span class="mi">12</span><span class="p">:</span><span class="mi">15</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Filtering-using-index-location:-.iloc()">Filtering using index location: .iloc()<a class="anchor-link" href="#Filtering-using-index-location:-.iloc()">&#182;</a></h4><p>The row and column extraction operations are only useful up to a point -- usually you want to select a subset of your dataframe using some kind of complex criteria. We have two main means of doing this: by index location of columns and rows, and by label name and/or some kind of Boolean test of the value in any given "cell." A third means combines the two. We start by looking at filtering/selecting by index location using <strong>iloc()</strong>.</p>
 <p>The concept here will be familiar to those comfortable with list slicing, or with how a matrix can be extracted in numpy. The pattern is:</p>
 <p><code>dataframe.iloc[row_index_start : row_index_index_stop, column_index_start : column_index_stop]</code></p>
@@ -13524,7 +13577,7 @@ div#notebook {
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># First two rows, third and fourth column only</span>
 
-<span class="n">df_from_csv</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">:]</span>
+<span class="n">df_from_csv</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
 </pre></div>
 
     </div>
@@ -13825,6 +13878,20 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mf">1.6</span>
+<span class="nb">round</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_from_csv</span><span class="p">[</span><span class="s2">&quot;Consumption_per_10000&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_from_csv</span><span class="p">[</span><span class="s2">&quot;Consumption_per_10000&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="nb">round</span><span class="p">)</span>
 
 <span class="n">df_from_csv</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
@@ -14070,7 +14137,7 @@ div#notebook {
 </li>
 <li><p>Official Pandas documentation, recently re-newed: <a href="https://pandas.pydata.org/pandas-docs/stable/index.html">https://pandas.pydata.org/pandas-docs/stable/index.html</a></p>
 </li>
-<li><p>Pandas's own 10-minute quick start: <a href="https://pandas.pydata.org/pandas-docs/stable/getting_started/10min.html">https://pandas.pydata.org/pandas-docs/stable/getting_started/10min.html</a></p>
+<li><p>Pandas's own 10-minute quick start: <a href="https://pandas.pydata.org/pandas-docs/stable/user_guide/10min.html#min">https://pandas.pydata.org/pandas-docs/stable/user_guide/10min.html#min</a></p>
 </li>
 <li><p>Software Carpentries Pandas lesson (as part of general Python instruction): <a href="https://swcarpentry.github.io/python-novice-gapminder/08-data-frames/">https://swcarpentry.github.io/python-novice-gapminder/08-data-frames/</a></p>
 </li>
@@ -14081,12 +14148,19 @@ div#notebook {
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Challenge-Answer">Challenge Answer<a class="anchor-link" href="#Challenge-Answer">&#182;</a></h3>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_from_csv</span><span class="p">[</span><span class="mi">12</span><span class="p">:</span><span class="mi">15</span><span class="p">][[</span><span class="s2">&quot;NYC_Pop&quot;</span><span class="p">,</span><span class="s2">&quot;PerCapita_Consumption&quot;</span><span class="p">]]</span>
 </pre></div>
 
     </div>
